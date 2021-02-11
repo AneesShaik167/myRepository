@@ -22,14 +22,18 @@ function App() {
 
 //Fetch Tasks
 const fetchTasks = async ()=>{
-  const result = await fetch("http://my-json-server.typicode.com/AneesShaik167/myRepository/tasks");
+  const result = await fetch("http://my-json-server.typicode.com/AneesShaik167/myRepository/tasks",{
+    mode: "cors"
+  });
   const data = await result.json();
   return data;
 }
 
 //Fetch Task
 const fetchTask = async (id)=>{
-  const result = await fetch(`http://my-json-server.typicode.com/AneesShaik167/myRepository/tasks/${id}`);
+  const result = await fetch(`http://my-json-server.typicode.com/AneesShaik167/myRepository/tasks/${id}`,{
+    mode: "cors"
+  });
   const data = await result.json();
   return data;
 }
